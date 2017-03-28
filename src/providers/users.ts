@@ -19,7 +19,7 @@ export class Users {
 
   getUsers() {
     return new Promise((resolve, reject) => {
-      this.http.get(`${this.strApi}/users`)
+      this.http.get(`${this.strApi}users`)
         .map(res => res.json())
         .subscribe(data => {
           resolve(data)
