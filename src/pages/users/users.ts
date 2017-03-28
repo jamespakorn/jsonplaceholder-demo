@@ -23,7 +23,7 @@ export class UsersPage {
     public userProvider: Users,
     public loadingCtrl: LoadingController) { }
 
-
+  
 
   ionViewWillEnter() {
 
@@ -47,10 +47,35 @@ export class UsersPage {
         }
         console.log(err);
         loading.dismiss();
-        
+
       });
 
   }
+
+  // ionViewWillEnter() {
+
+  //   let loading = this.loadingCtrl.create({
+  //     content: 'กรุณารอซักครู่...',
+  //     spinner: 'ios'
+
+  //   });
+  //   loading.present();
+
+  //   this.userProvider.getUsers1()
+  //     .subscribe((data) => {
+  //       this.users = data;
+  //       console.log(data);
+  //       loading.dismiss();
+  //     }, err => {
+  //       if (err.status == 404) {
+  //         alert('ไม่พบข้อมูล/ตรวจสอบการเชื่อมต่อ server')
+  //       } else {
+  //         alert('ตรวจสอบการเชื่อมต่ออินเตอร์เน็ต')
+  //       }
+  //       console.log(err);
+  //       loading.dismiss();
+  //     })
+  // }
 
   goDetail(user: any) {
     this.navCtrl.push(UserDetailPage, { user: user });

@@ -16,15 +16,15 @@
 <ion-content>
 
   <ion-item>
-    <ion-input type="text" placeholder="server api" [(ngModel)]="server" ></ion-input>
+    <ion-label floating>ตั้งค่าเชื่อมกับ server api</ion-label>
+    <ion-input type="text" floating [(ngModel)]="server"></ion-input>
   </ion-item>
-
   <div padding>
-  <button ion-button block (click)="setConfig()">ตกลง</button>
+    <button ion-button block (click)="setConfig()">ตกลง</button>
   </div>
 
   <p padding> api : {{server}}</p>
-  
+
 
 
 
